@@ -1,0 +1,61 @@
+body  {
+    background-color: #9fd0db; 
+  
+  }
+  .container{
+    background-color: #e9f5f4;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 15%;
+    text-align: center;
+    border-radius: 7px;
+    padding: 20px;
+
+  }
+ 
+  input[type=text], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 25px ;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=password], select {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button{
+    width: 20%;
+    background-color: #256c86;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  .header{
+    width: 100%;
+    background-color: rgb(7, 101, 117);
+    padding: 1px 20px;
+    color: white;
+    border-radius: 7px;
+  }
+  .ui-define{
+    background-color: rgb(243, 240, 243);
+    margin-left: 25%;
+    width: 50%;
+    padding: 20px 30px;
+    margin-top: 5%;
+  }
