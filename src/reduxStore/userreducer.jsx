@@ -1,19 +1,24 @@
+import { createSlice } from '@reduxjs/toolkit';
+
 const initialState = {
   user: null,
+  isUserLoggedIn: false,
 };
 
-const userReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'LOGIN_SUCCESS':
-      console.log('I am here');
-      return {
-        ...state,
-        user: action.payload,
-      };
-      
-    default:
-      return state;
-  }
-};
-
-export default userReducer;
+const userSlice = createSlice({
+  name: 'user',
+  initialState,
+  reducers: {
+    setUser(state, action) {
+      state.user = action.payload;
+      state.isUserLoggedIn = true;
+    },
+    logout(state){
+      state.user = null;
+      state.isUserLoggedIn = false;
+    },
+  },
+});
+   
+export const { setUser, logout } = userSlice.actions;
+export default userSlice.reducer;

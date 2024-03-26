@@ -1,18 +1,19 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState} from "react"
+import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import './loginpage.css'
-import { loginSuccess } from "./reduxStore/Useraction"
-import { useDispatch } from "react-redux"
+import { loginSuccess } from "../reduxStore/Useraction"
+//import { useDispatch, useSelector } from "react-redux"
 
 const LoginForm=()=>{
     // eslint-disable-next-line no-unused-vars
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const data= {name:"",  password:""};
-    const [inputData, setInputData]= useState(data)
-    const [flag, setFlag] = useState(false)
+    const [inputData, setInputData]= useState(data);
+    const [flag, setFlag] = useState(false);
     const dispatch = useDispatch();
-   
+
     useEffect(()=>{
         console.log("Registered")
     },[])
@@ -34,8 +35,8 @@ const LoginForm=()=>{
             setFlag(true)
 
             setTimeout(()=>{
-                navigate("/Navbar");
-            },5000);
+              navigate("/dashboard");
+            }, 5000);
         
         }
         
